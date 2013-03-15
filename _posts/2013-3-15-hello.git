@@ -1,9 +1,0 @@
----
-layout: post
-category : lessons
-tagline: "Supporting tagline"
-tags : [hello world]
----
-{% include JB/setup %}
-
-`print 'hello world'`
