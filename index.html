@@ -3,6 +3,7 @@ layout: page
 tagline: 
 ---
 {% include JB/setup %}
+
 <div class="row">
   <div class="span8">
   {% for post in paginator.posts %}
@@ -16,7 +17,7 @@ tagline:
     <div class="content">{{ content }}</div>
     </article>
   </section>
-<div class="span8"></div>
+<br/><br/>
   {% endfor %}
   <div class="pagination">
       <ul>{% if paginator.previous_page %}
