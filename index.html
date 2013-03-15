@@ -20,7 +20,7 @@ tagline:
     <article>
       <header>
       <h1><a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></h1>
-      <div class="date">{{ site.author.name }} 发表于 <span>{{ post.date | date:"%Y-%m-%d" }}</span></div>
+      <div class="date">{{ site.author.name }} Posted <span>{{ post.date | date:"%Y-%m-%d" }}</span></div>
     </header>
     <div class="content">{{ content }}</div>
     </article>
@@ -28,9 +28,9 @@ tagline:
   {% endfor %}
   <div class="pagination">
       <ul>{% if paginator.previous_page %}
-        <li class="next"><a href='{% if paginator.previous_page > 1 %}/page{{ paginator.previous_page}}{% else %}/{% endif %}'>&larr; 上一页</a></li>{% endif %}
-        <li><a href="{{ BASE_PATH }}{{ site.JB.archive_path }}">归档</a></li>{% if paginator.next_page %}
-        <li class="prev"><a href='/page{{ paginator.next_page }}'>下一页 &rarr;</a></li>{% endif %}
+        <li class="next"><a href='{% if paginator.previous_page > 1 %}/page{{ paginator.previous_page}}{% else %}/{% endif %}'>&larr; Previous</a></li>{% endif %}
+        <li><a href="{{ BASE_PATH }}{{ site.JB.archive_path }}">Archive</a></li>{% if paginator.next_page %}
+        <li class="prev"><a href='/page{{ paginator.next_page }}'>Next &rarr;</a></li>{% endif %}
       </ul>
   </div>
   </div>
@@ -38,7 +38,7 @@ tagline:
   <aside class="span4">
 
     <section>
-    <h4>最近发表</h4>
+    <h4>Recent posted</h4>
     <ul id="recent_posts">{% for rpost in site.posts limit: 10 %}
       <li class="post">
         <a href="{{ BASE_PATH }}{{ rpost.url }}">{{ rpost.title }}</a>
@@ -47,7 +47,7 @@ tagline:
     </section>
     
   {% unless site.categories == empty %}
-    <h4>分类</h4>
+    <h4>Categories</h4>
     <ul class="tag_box">
       {% assign categories_list = site.categories %}
       {% include JB/categories_list %}
