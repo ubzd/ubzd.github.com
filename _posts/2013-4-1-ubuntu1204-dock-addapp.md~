@@ -1,8 +1,8 @@
 ---
 layout: post
 title : Ubuntu unity 侧边栏添加应用
-category: ubuntu
-tags: [ubuntu]
+category: django
+tags: [django, python]
 ---
 {% include JB/setup %}
 
